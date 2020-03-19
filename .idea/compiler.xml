@@ -9,8 +9,5 @@
         <module name="tutorialsNinjaLastProject" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="tutorialsNinjaLastProject" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
