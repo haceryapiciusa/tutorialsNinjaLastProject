@@ -28,6 +28,7 @@ public class addToCartAndRemove {
 
     }
 
+
     @And("^Search the iphone$")
     public void search_the_iphone() {
 

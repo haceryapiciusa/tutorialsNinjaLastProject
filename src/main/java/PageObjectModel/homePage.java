@@ -33,10 +33,10 @@ public class homePage extends AbstractClass {
 
 
     public void signIn(){
-            clickFunctionality(signInButton);
-            sendKeysFunctionality(typeEmail,readProperties.getData("username"));
-            sendKeysFunctionality(typePassword, readProperties.getData("password"));
-            clickFunctionality(clickSubmit);
-        }
+        clickFunctionality(signInButton);
+        sendKeysFunctionality(typeEmail,readProperties.getData("username"));
+        sendKeysFunctionality(typePassword,readProperties.getData("password"));
+        clickFunctionality(clickSubmit);
     }
 
+}
