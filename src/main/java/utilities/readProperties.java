@@ -9,6 +9,7 @@ public class readProperties {
 
         String path = "configuration.properteis";
 
+
         String result = null;
 
         try {
@@ -18,7 +19,7 @@ public class readProperties {
 
             properties.load( input );
 
-            result = properties.getProperty( whichData );
+            result = properties.getProperty( whichData);
         }catch(Exception e){
 
         }

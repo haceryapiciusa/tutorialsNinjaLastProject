@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
+import utilities.readProperties;
 
 public class homePage extends AbstractClass {
     WebDriver driver = Driver.getDriver();
@@ -32,10 +33,10 @@ public class homePage extends AbstractClass {
 
 
     public void signIn(){
-        clickFunctionality(signInButton);
-        sendKeysFunctionality(typeEmail,"hacer@gmail.com");
-        sendKeysFunctionality(typePassword,"derdim");
-        clickFunctionality(clickSubmit);
+            clickFunctionality(signInButton);
+            sendKeysFunctionality(typeEmail,readProperties.getData("username"));
+            sendKeysFunctionality(typePassword, readProperties.getData("password"));
+            clickFunctionality(clickSubmit);
+        }
     }
 
-}
