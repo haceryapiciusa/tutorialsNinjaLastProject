@@ -40,6 +40,7 @@ public class buyAnyItem {
     public void click_on_proceed_to_checkout() {
     itemPage.ClickOnProceedButton();
     itemPage.ClickOnProceedButton();
+    itemPage.clickOnQuantityUpButton();
 
     }
 
