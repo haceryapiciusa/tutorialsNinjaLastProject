@@ -49,17 +49,7 @@ public class AbstractClass {
 
     }
 
-    public void switchWindow(){
 
-        Set<String> windows=  driver.getWindowHandles();
-
-        for(String myWin:windows){
-            driver.switchTo().window( myWin );
-            System.out.println(driver.getCurrentUrl());
-
-        }
-
-    }
 
     public void sleep(int num){
 

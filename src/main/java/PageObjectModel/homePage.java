@@ -12,11 +12,11 @@ public class homePage extends AbstractClass {
     WebDriver driver = Driver.getDriver();
 
 
-    public homePage(){
-        PageFactory.initElements( driver , this );
+    public homePage() {
+        PageFactory.initElements(driver, this);
     }
 
-    public void VerifyURL(){
+    public void VerifyURL() {
         verifyURL("http://automationpractice.com/index.php?controller=my-account");
     }
 
@@ -29,14 +29,33 @@ public class homePage extends AbstractClass {
     private WebElement typePassword;
     @FindBy(css = "p[class='submit'] button")
     private WebElement clickSubmit;
+    @FindBy(css = "input[id='search_query_top']")
+    private WebElement searchInput;
+    @FindBy(css = "button[name='submit_search']")
+    private WebElement buttonSearch;
+
+//
+//    @FindBy(css = "a[title='Proceed to checkout']")
+//    private WebElement buttonProceedToCheckout;
 
 
 
-    public void signIn(){
+
+
+    public void signIn() {
         clickFunctionality(signInButton);
         sendKeysFunctionality(typeEmail, readProperties.getData("username"));
-        sendKeysFunctionality(typePassword,readProperties.getData("password"));
+        sendKeysFunctionality(typePassword, readProperties.getData("password"));
         clickFunctionality(clickSubmit);
     }
+
+    public void writeInSeachButton(String search) {
+        sendKeysFunctionality(searchInput, search);
+    }
+
+    public void clickOnButtonSearch() {
+        clickFunctionality(buttonSearch);
+    }
+
 
 }
