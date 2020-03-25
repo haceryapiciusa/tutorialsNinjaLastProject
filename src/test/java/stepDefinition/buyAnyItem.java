@@ -31,7 +31,7 @@ public class buyAnyItem {
     @And("^fill required fields$")
     public void fill_required_fields() {
    // itemPage.clickOnQuantityUpButton();
-   // itemPage.clickOnSizeButton();
+    itemPage.clickOnSizeButton();
     itemPage.clickOnAddToCart();
     }
 
