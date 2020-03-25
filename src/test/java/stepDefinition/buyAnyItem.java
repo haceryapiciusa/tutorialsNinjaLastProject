@@ -39,8 +39,8 @@ public class buyAnyItem {
     @And("^Click on proceed to checkout$")
     public void click_on_proceed_to_checkout() {
     itemPage.ClickOnProceedButton();
-    itemPage.ClickOnProceedButton();
-    itemPage.clickOnQuantityUpButton();
+//    itemPage.ClickOnProceedButton();
+//    itemPage.clickOnQuantityUpButton();
 
     }
 
