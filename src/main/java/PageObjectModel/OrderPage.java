@@ -28,4 +28,10 @@ public class OrderPage extends AbstractClass {
         clickFunctionality(OrderHistoryAndDetails);
     }
 
+    @FindBy(xpath = "//span[contains(text(),'My wishlists')]")
+    private WebElement mywishlist;
+    public void mywishlist(){
+        clickFunctionality(mywishlist);
+    }
+
 }

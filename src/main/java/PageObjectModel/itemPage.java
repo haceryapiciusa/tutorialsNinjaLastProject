@@ -42,6 +42,27 @@ public class itemPage extends AbstractClass {
     @FindBy(xpath = "//p/strong[contains(text(),'Your order on My Store is complete.')]")
     private WebElement confirmationText;
 
+    @FindBy(css="i[class='icon-th-list']")
+    private WebElement listview;
+
+    @FindAll({
+            @FindBy(css = "div[class='product-image-container']")
+    })
+    private List<WebElement> products;
+
+    @FindBy(xpath="//a[@id='wishlist_button']")
+    private WebElement addwishlist;
+
+    @FindBy(css="a[title='Close']")
+    private WebElement closepopup;
+
+    @FindBy(css="a[title='View my customer account']")
+    private WebElement mycustomeraccount;
+
+    @FindBy(className="fancybox-item ")
+    private WebElement closingframebutton;
+
+
 //div[@id='uniform-cgv']
 
     public void ClickOnProceedButton0(){
@@ -76,5 +97,23 @@ public class itemPage extends AbstractClass {
         confirmationText.isDisplayed();
 
     }
+    public void listViewMode(){
+        clickFunctionality(listview);
+    }
+    public void selectanyitem(){
+        clickRandomNum(products);
+    }
+    public void addWishList(){ clickFunctionality(addwishlist); }
+    public void closePopUP(){
+        clickFunctionality(closepopup);
+    }
+    public void setMycustomeraccount(){clickFunctionality(mycustomeraccount); }
+    public void switchtoframe(){
+        driver.switchTo().frame(0);
+    }
+    public void closeFrame(){ clickFunctionality(closingframebutton); }
+   // public void returnmainpage(){ driver.switchTo().parentFrame(); }
+
+
     }
 
