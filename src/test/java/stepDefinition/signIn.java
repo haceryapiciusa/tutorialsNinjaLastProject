@@ -25,6 +25,7 @@ public class signIn {
     @Given("^Click on the sign in buttton$")
     public void click_on_the_sign_in_buttton() {
         homePage.signIn();
+
     }
 
     @Then("^Verify you logged in$")
