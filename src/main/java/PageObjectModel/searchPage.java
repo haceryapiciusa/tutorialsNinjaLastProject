@@ -14,12 +14,21 @@ public class searchPage extends AbstractClass {
     public  searchPage(){
         PageFactory.initElements(driver,this);
     }
-    @FindAll({
-            @FindBy(css = "a[class='product_img_link']")
-    })
-    private List<WebElement> products;
-    public void clickAnyProducts(){
-        clickRandomNum(products);
 
+
+    @FindBy(css = "input[id='search_query_top']")
+    private WebElement searchInput;
+    @FindBy(css = "button[name='submit_search']")
+    private WebElement buttonSearch;
+
+
+
+    public void writeInSeachButton(String search) {
+        sendKeysFunctionality(searchInput, search);
     }
+
+    public void clickOnButtonSearch() {
+        clickFunctionality(buttonSearch);
+    }
+
 }

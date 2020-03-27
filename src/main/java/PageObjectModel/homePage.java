@@ -3,10 +3,13 @@ package PageObjectModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 import utilities.readProperties;
+
+import java.util.List;
 
 public class homePage extends AbstractClass {
     WebDriver driver = Driver.getDriver();
@@ -19,7 +22,14 @@ public class homePage extends AbstractClass {
     public void VerifyURL() {
         verifyURL("http://automationpractice.com/index.php?controller=my-account");
     }
-
+    @FindAll({
+            @FindBy(css = "a[title='Add to cart']")
+    })
+    private List<WebElement> addToCart;
+    public void clickAnyProducts(){
+        clickRandomNum(addToCart);
+//p/button[@class='exclusive added'
+    }
 
     @FindBy(xpath = "//a[@class='login']")
     private WebElement signInButton;
@@ -29,12 +39,11 @@ public class homePage extends AbstractClass {
     private WebElement typePassword;
     @FindBy(css = "p[class='submit'] button")
     private WebElement clickSubmit;
-    @FindBy(css = "input[id='search_query_top']")
-    private WebElement searchInput;
-    @FindBy(css = "button[name='submit_search']")
-    private WebElement buttonSearch;
 
-//
+    @FindBy(css = "i[class='icon-th-list']")
+    private WebElement buttonlist;
+
+//i[class='icon-th-list']
 //    @FindBy(css = "a[title='Proceed to checkout']")
 //    private WebElement buttonProceedToCheckout;
 
@@ -49,13 +58,8 @@ public class homePage extends AbstractClass {
         clickFunctionality(clickSubmit);
     }
 
-    public void writeInSeachButton(String search) {
-        sendKeysFunctionality(searchInput, search);
-    }
 
-    public void clickOnButtonSearch() {
-        clickFunctionality(buttonSearch);
-    }
-
-
+public void ClickOnList(){
+        clickFunctionality(buttonlist);
+}
 }

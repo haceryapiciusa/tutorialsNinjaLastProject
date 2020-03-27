@@ -1,6 +1,7 @@
 package PageObjectModel;
 
 import com.google.gson.internal.$Gson$Preconditions;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -13,37 +14,67 @@ import java.util.List;
 public class itemPage extends AbstractClass {
     WebDriver driver = Driver.getDriver();
     homePage homePage= new homePage();
+    JavascriptExecutor js = (JavascriptExecutor) driver;
+
+
 
     public itemPage() {
         PageFactory.initElements(driver, this);
     }
 
-    //@FindBy(css = "i[class='icon-plus']")
+
+    @FindBy(xpath = "//a/span[contains(text(),'Proceed to checkout')]")
+    private WebElement proceedButton0;
     @FindBy(xpath = "//i[contains(@class,'icon-plus')]")
     private WebElement quantityUpButton;
+    @FindBy(xpath = "//p/a/span[contains(text(),'Proceed to checkout')]")
+    private WebElement proceedButton1;
+    @FindBy(css = "button[name='processAddress']")
+    private WebElement proceedButton3;
+    @FindBy(css = "div[id='uniform-cgv']")
+    private WebElement termsOfService;
+    @FindBy(xpath = "//button/span[contains(text(),'Proceed to checkout')]")
+    private WebElement proceedCheckOut;
+    @FindBy(xpath = "//div[@class='col-xs-12 col-md-6']")
+    private WebElement bankPay;
+    @FindBy(css = "button[class='button btn btn-default button-medium']")
+    private WebElement confirmOrder;
+    @FindBy(xpath = "//p/strong[contains(text(),'Your order on My Store is complete.')]")
+    private WebElement confirmationText;
 
-    @FindBy(xpath = "//span[contains(text(),'L')]")
-    private WebElement sizeButton;
+//div[@id='uniform-cgv']
 
-    @FindBy(xpath = "//span[contains(text(),'Add to cart')]")
-    private WebElement addToCartButton;
+    public void ClickOnProceedButton0(){
 
-    @FindBy(xpath = "//a[@class='btn btn-default button button-medium']")
-      private WebElement proceedButton;
-
-
+        clickFunctionality(proceedButton0);
+    }
     public void clickOnQuantityUpButton() {
-
         clickFunctionality(quantityUpButton);
     }
+    public void ClickProceedButton1() {
 
-    public void clickOnSizeButton() {
-        clickFunctionality(sizeButton);
+        clickFunctionality(proceedButton1);
     }
-    public void clickOnAddToCart(){
-        clickFunctionality(addToCartButton);
+    public void ClickProceedButton3(){
+        clickFunctionality(proceedButton3);
     }
-public void ClickOnProceedButton(){
-        clickFunctionality(proceedButton);
-}
+
+    public void ClickOnTermsOfService() {
+        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        clickFunctionality(termsOfService);
     }
+    public void ClickProceedCheckout(){
+        clickFunctionality(proceedCheckOut);
+    }
+    public void ClickPayByBank(){
+        clickFunctionality(bankPay);
+    }
+    public void ClickOnConfirmOrder(){
+        clickFunctionality(confirmOrder);
+    }
+    public void verifyOrderConfirmed(){
+        confirmationText.isDisplayed();
+
+    }
+    }
+

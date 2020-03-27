@@ -5,9 +5,7 @@ Feature: Buy Item
     And Search for "dress"
     And Click on search button
     And Click on any item
-    And fill required fields
-  And Click the add to cart button
-  And Click on proceed to checkout
+    And Click on proceed to checkout
     And Click on Agree the terms button
     And Click on bank payment
     And Click on confirm button
