@@ -53,5 +53,33 @@ public class ContactPage extends AbstractClass {
         }
     }
 
+    @FindAll( {
+            @FindBy(xpath = "//select[@style='display: inline-block;']")
+    } )
+    private List<WebElement> productDropdownList;
+    public void chooseRandomInProductDropdownList(){
+        System.out.println(productDropdownList.size());
+        for(int i = 0 ; i < productDropdownList.size() ; i++){
+            selectInTheDropdown( productDropdownList.get( i ) );
+        }
+    }
 
+
+    @FindBy(xpath = "//textarea[@id='message']")
+    private WebElement inputbox;
+    public void typeInTheInputs(){
+            inputbox.sendKeys("Message");
+    }
+
+    @FindBy(xpath = "//button[@id='submitMessage']")
+    private WebElement contactUsSubmit;
+    public void clickContactUsSubmit(){
+        clickFunctionality(contactUsSubmit);
+    }
+
+    @FindBy(xpath = "//div/p[contains(text(),'Your message has been successfully sent to our team.')]")
+    private WebElement confirmationText;
+    public void verifyContactConfirmed() {
+        confirmationText.isDisplayed();
+    }
 }

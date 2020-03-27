@@ -30,22 +30,22 @@ public class contactUs {
 
     @And("^Select Product$")
     public void select_Product() {
-
+        contactPage.chooseRandomInProductDropdownList();
     }
 
     @And("^Type message$")
     public void type_message() {
-
+        contactPage.typeInTheInputs();
     }
 
     @And("^Click send button$")
     public void click_send_button() {
-
+    contactPage.clickContactUsSubmit();
     }
 
     @Then("^Verify contact us page$")
     public void verify_contact_us_page() {
-
+        contactPage.verifyContactConfirmed();
     }
 
 }
