@@ -1,6 +1,7 @@
 package PageObjectModel;
 
 import org.junit.Assert;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -30,7 +31,9 @@ public class AbstractClass {
         wait.until( ExpectedConditions.visibilityOf( sendKeysButton ) );
         sendKeysButton.sendKeys( value );
     }
+    public void scrollDown() {
 
+    }
     public int randomNum(int max){
 
         Random rnd = new Random(  );
@@ -49,17 +52,7 @@ public class AbstractClass {
 
     }
 
-    public void switchWindow(){
 
-        Set<String> windows=  driver.getWindowHandles();
-
-        for(String myWin:windows){
-            driver.switchTo().window( myWin );
-            System.out.println(driver.getCurrentUrl());
-
-        }
-
-    }
 
     public void sleep(int num){
 
@@ -97,4 +90,6 @@ public class AbstractClass {
         Actions actions = new Actions( driver );
         actions.moveToElement( hoveroverElement ).build().perform();
     }
+
+
 }
