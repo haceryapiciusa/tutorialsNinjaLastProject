@@ -1,5 +1,5 @@
-Feature: Buy Item
-  Scenario: Buy item
+Feature: Adding the wishes Item
+  Scenario: Add  item to the wish list
     Given Navigate to website
     And Click on the sign in buttton
     And Search for "dress"
