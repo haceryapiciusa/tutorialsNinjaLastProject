@@ -17,7 +17,6 @@ public class addToWishList extends AbstractClass {
 
 
 
-// sgghhjjk gdhsksfldsfsyughhjk ert
 
 
 
@@ -58,7 +57,7 @@ public class addToWishList extends AbstractClass {
     @And("^Click button to close frame$")
     public void click_button_to_close_frame() {
         itemPage.closeFrame();
-        //itemPage.returnmainpage();
+       // itemPage.returnmainpage();
 
     }
 
