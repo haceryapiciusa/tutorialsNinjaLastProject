@@ -64,11 +64,18 @@ public class ContactPage extends AbstractClass {
         }
     }
 
+    @FindBy(xpath = "//span[@class='action']")
+    private WebElement chooseFile;
+    public void clickChooseFile() throws InterruptedException {
+
+
+    }
 
     @FindBy(xpath = "//textarea[@id='message']")
     private WebElement inputbox;
     public void typeInTheInputs(){
             inputbox.sendKeys("Message");
+
     }
 
     @FindBy(xpath = "//button[@id='submitMessage']")
