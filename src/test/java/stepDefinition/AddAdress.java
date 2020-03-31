@@ -46,7 +46,7 @@ public class AddAdress extends AbstractClass {
 
     }
     @And("^Delete new adress$")
-    public void delete_new_adress() {
+    public void delete_new_adress()  {
         adressPage.setDeletingnewadress();
 
     }
