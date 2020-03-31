@@ -1,5 +1,5 @@
 Feature: Adding the wishes Item
-  Scenario: Add  item to the wish list
+  Scenario: Adding  item to the wishes list
     Given Navigate to website
     And Click on the sign in buttton
     And Search for "dress"
