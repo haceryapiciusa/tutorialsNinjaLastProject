@@ -44,10 +44,13 @@ public class adressPage extends AbstractClass {
     @FindBy(css = "button[name='submitAddress']")
     private WebElement saveadressbutton;
 
+    private String expectedalias = "my second adress";
+
     @FindBy(xpath = "//h3[(text()='my second adress')]")
     private WebElement verifynewadress;
 
-    private String expectedalias = "my second adress";
+    @FindBy(xpath = "//h3[text()='my second adress']//ancestor::li//following-sibling::li[8]/a[@title='Delete']")
+    private WebElement deletingnewadress;
 
     public void clickMyAdress(){clickFunctionality(myAdressesButton); }
     public void clicknewAdress(){clickFunctionality(newAdressesButton);}
@@ -75,6 +78,10 @@ public class adressPage extends AbstractClass {
 
 
 
+        }
+        public void setDeletingnewadress(){
+        clickFunctionality(deletingnewadress);
+        driver.switchTo().alert().accept();
         }
 
 

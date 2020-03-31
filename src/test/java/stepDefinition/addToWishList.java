@@ -11,12 +11,9 @@ import utilities.Driver;
 
 public class addToWishList extends AbstractClass {
     WebDriver driver = Driver.getDriver();
-     itemPage itemPage= new itemPage();
-    OrderPage orderPage=new OrderPage();
-    wishlistPage wishlistPage=new wishlistPage();
-
-
-
+    itemPage itemPage = new itemPage();
+    OrderPage orderPage = new OrderPage();
+    wishlistPage wishlistPage = new wishlistPage();
 
 
 
@@ -26,68 +23,32 @@ public class addToWishList extends AbstractClass {
         itemPage.listViewMode();
 
     }
-
-    @And("^Select any of the item$")
-    public void select_on_of_the_item() {
-        itemPage.selectanyitem();
-
-    }
-
-    @And("^Switch to the frame$")
-    public void switch_to_the_frame() {
-        itemPage.switchtoframe();
+    @And("^Select any item's addtowish$")
+    public void select_any_item_s_addtowish() {
+        itemPage.selectanyitemswishlist();
 
     }
-
-
-
-
-    @And("^Click on the add to wish list$")
-    public void click_on_the_add_to_wish_list() {
-        itemPage.addWishList();
-
-    }
-
     @And("^Click added to wish list pop-up to close$")
     public void click_added_to_wish_list_pop_up_to_close() {
         itemPage.closePopUP();
 
     }
 
-    @And("^Click button to close frame$")
-    public void click_button_to_close_frame() {
-        itemPage.closeFrame();
-       // itemPage.returnmainpage();
-
-    }
-
     @And("^Click the view my customer account$")
     public void click_the_view_my_customer_account() {
-        itemPage.setMycustomeraccount();
-
+     itemPage.setMycustomeraccount();
     }
 
     @And("^Click on my wishlist$")
     public void click_on_my_wishlist() {
-        orderPage.mywishlist();
+        itemPage.setClickwishlist();
 
 
     }
-
-
-
-    @Then("^Verify the wishlist$")
-    public void verify_the_wishlist() {
-        wishlistPage.verifywishlistAdded();
-
-
+    @Then("^Verify My wishlist displayed$")
+    public void verify_My_wishlist_displayed() {
+       wishlistPage.verifywishlistAdded();
     }
-
-
-
-
-
-
 
 
 

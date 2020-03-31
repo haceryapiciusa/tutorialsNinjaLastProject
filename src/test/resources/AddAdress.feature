@@ -8,3 +8,4 @@ Feature:Adding the Adress
     And Fill the required fields
     And Click Save button
     Then Verify new adress added
+    And Delete new adress
