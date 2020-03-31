@@ -45,5 +45,10 @@ public class AddAdress extends AbstractClass {
         adressPage.verifynewAdressAdded();
 
     }
+    @And("^Delete new adress$")
+    public void delete_new_adress() {
+        adressPage.setDeletingnewadress();
+
+    }
 
 }

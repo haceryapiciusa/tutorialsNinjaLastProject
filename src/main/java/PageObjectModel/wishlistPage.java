@@ -1,5 +1,6 @@
 package PageObjectModel;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -16,7 +17,11 @@ public class wishlistPage extends AbstractClass {
     @FindBy(xpath = "//a[contains(text(),'My wishlist')]")
     private WebElement wishlistcheck;
 
+
+
+
     public void verifywishlistAdded(){ wishlistcheck.isDisplayed();}
+
 
 
 

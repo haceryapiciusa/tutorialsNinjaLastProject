@@ -46,7 +46,7 @@ public class itemPage extends AbstractClass {
     private WebElement listview;
 
     @FindAll({
-            @FindBy(css = "div[class='product-image-container']")
+            @FindBy(css = "div[class='wishlist']")
     })
     private List<WebElement> products;
 
@@ -59,11 +59,8 @@ public class itemPage extends AbstractClass {
     @FindBy(css="a[title='View my customer account']")
     private WebElement mycustomeraccount;
 
-    @FindBy(className="fancybox-item ")
-    private WebElement closingframebutton;
-
-
-//div[@id='uniform-cgv']
+    @FindBy(xpath="//span[text()='My wishlists']")
+    private WebElement clickwishlist;
 
     public void ClickOnProceedButton0(){
 
@@ -100,19 +97,17 @@ public class itemPage extends AbstractClass {
     public void listViewMode(){
         clickFunctionality(listview);
     }
-    public void selectanyitem(){
+    public void selectanyitemswishlist(){
         clickRandomNum(products);
+
+
     }
-    public void addWishList(){ clickFunctionality(addwishlist); }
+
     public void closePopUP(){
         clickFunctionality(closepopup);
     }
     public void setMycustomeraccount(){clickFunctionality(mycustomeraccount); }
-    public void switchtoframe(){
-        driver.switchTo().frame(0);
-    }
-    public void closeFrame(){ clickFunctionality(closingframebutton); }
-   // public void returnmainpage(){ driver.switchTo().parentFrame(); }
+    public void setClickwishlist(){clickFunctionality(clickwishlist);}
 
 
     }
