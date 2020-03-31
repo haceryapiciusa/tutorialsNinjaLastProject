@@ -1,4 +1,5 @@
 Feature:Order History
+  @SmokeTest
   Scenario:Order Histoy
     Given Navigate to website
     And Click on the sign in buttton

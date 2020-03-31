@@ -1,5 +1,5 @@
 Feature:Change My Personal Information
-
+  @SmokeTest
   Scenario:Change Date of Birth
 
     Given Navigate to website

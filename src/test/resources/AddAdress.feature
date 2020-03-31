@@ -1,4 +1,5 @@
 Feature:Adding the Adress
+  @SmokeTest
   Scenario:Add adress on your account
     Given Navigate to website
     And Click on the sign in buttton

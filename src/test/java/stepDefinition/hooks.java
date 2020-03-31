@@ -6,6 +6,6 @@ import utilities.Driver;
 public class hooks {
     @After
     public void afterMethod(){
-      //  Driver.closeDriver();
+        Driver.closeDriver();
     }
 }

@@ -1,4 +1,5 @@
 Feature: Adding the wishes Item
+  @SmokeTest
   Scenario: Adding  items to the wishes list
     Given Navigate to website
     And Click on the sign in buttton

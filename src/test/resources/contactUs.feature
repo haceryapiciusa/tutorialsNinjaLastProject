@@ -1,4 +1,5 @@
 Feature:Contact Us
+  @SmokeTest
   Scenario: Contact Us
     Given Navigate to website
     And Click on the sign in buttton

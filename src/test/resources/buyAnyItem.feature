@@ -1,4 +1,5 @@
 Feature: Buy Item
+  @SmokeTest
   Scenario: Buy item
     Given Navigate to website
     And Click on the sign in buttton
